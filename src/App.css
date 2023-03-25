@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,34 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* .content {
+  position: relative;
+  top: 60px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+} */
+.background {
+  height: 100%;
+  background-color: #313133;
+  /* background-image: url("./BackgroundInbox.png"); */
+}
+
+@media (max-width: 600px) {
+  /* .content {
+    position: relative;
+    top: 120px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 auto;
+  } */
 }

@@ -1,0 +1,26 @@
+/* .stickyheader {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.normalBody {
+  position: fixed;
+  top: 160px;
+} */
+.fixed-table {
+  table-layout: auto;
+  background-color: rgb(251, 251, 251);
+}
+
+.fixed-table th {
+  background-color: rgb(251, 251, 251);
+}
+.fixed-table tbody {
+  overflow: auto;
+}
+
+.fixed-table tr:nth-child(odd) {
+  background-color: rgb(223, 223, 223);
+}

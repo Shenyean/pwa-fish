@@ -1,0 +1,27 @@
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+.rememberme {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.rememberme label {
+  width: 220px;
+  padding-right: 5px;
+  font-size: 18px;
+}
+.rememberme input {
+  width: 20px;
+}
+
+@media (max-width: 600px) {
+  .rememberme label {
+    width: 120px;
+    padding-right: 5px;
+    font-size: 9px;
+  }
+  .rememberme input {
+    width: 10px;
+  }
+}

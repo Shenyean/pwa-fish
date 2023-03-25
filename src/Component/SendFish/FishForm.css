@@ -1,0 +1,79 @@
+img {
+  width: 120px;
+  height: 52px;
+  border: 2px ridge rgb(212, 208, 208);
+  background-color: none;
+  border-radius: 15px;
+  opacity: 0.9;
+}
+.fishFormContent {
+  display: flex;
+  align-items: center;
+
+  background-size: cover;
+  justify-content: space-around;
+  background-repeat: no-repeat;
+  height: 100%;
+  border-radius: 10px;
+}
+.form-big {
+  display: flex;
+  width: 1080px;
+  height: 540px;
+  border-radius: 10px;
+}
+.form-fishNumber {
+  display: flex;
+}
+.MuiAutocomplete-root {
+  width: 400px;
+}
+.form-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dddedf;
+}
+.form-right {
+  flex: 1;
+  background-color: #ffffff;
+}
+/* .recipients-field {
+  border-radius: 25px;
+  background-color: rgb(212, 208, 208);
+  align-items: center;
+  height: 20px;
+} */
+
+/* & .MuiAutocomplete-inputRoot{
+
+} */
+
+@media (max-width: 600px) {
+  img {
+    width: 100px;
+    height: 42px;
+    border: 1px ridge black;
+    background-color: rgb(241, 241, 241);
+  }
+  .fishFormContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 170px;
+
+    background-repeat: no-repeat;
+  }
+
+  .form-big {
+    display: inline;
+  }
+
+  .form-left {
+    flex: none;
+  }
+  .form-right {
+    flex: none;
+  }
+}

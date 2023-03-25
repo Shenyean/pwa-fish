@@ -1,0 +1,186 @@
+.loginbg {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* background: url("./loginbackground.png"); */
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
+.login {
+  width: 70%;
+  height: 70%;
+  margin: auto;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.MuiInputLabel-root {
+  min-width: 200px;
+  font-weight: bold;
+}
+
+.login-form {
+  /* position: relative; */
+  z-index: 1;
+  /* background: #ffffff; */
+  border-radius: 20px;
+  max-width: auto;
+  max-height: auto;
+  height: 540px;
+  text-align: none;
+  display: flex;
+  /*background: url("./BackgroundInbox.png");*/
+}
+
+.left {
+  flex: 1;
+  background-color: #dddedf;
+}
+
+.right {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.login-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: top;
+  padding: 3px;
+  /* padding-bottom: 35px;
+  padding-top: 10px; */
+}
+.login-group label {
+  width: fit-content;
+  padding-right: 10px;
+}
+.login-group input {
+  width: 450px;
+  height: 32px;
+  font-size: 24px;
+}
+.selectLanguage {
+  font-size: 18px;
+  font-weight: lighter;
+}
+.login-email {
+  font-size: 16px;
+}
+
+.login-password {
+  font-size: 16px;
+}
+.submitbtn {
+  display: flex;
+
+  justify-content: flex-end;
+}
+.submitbtn button {
+  font-size: 16px;
+  border-radius: 10px;
+  width: 6rem;
+  height: 2rem;
+  border: none;
+  background-color: rgb(97, 97, 97);
+  color: #ffffff;
+}
+
+.terms {
+  font-size: small;
+}
+.forgetpw {
+  text-decoration: none;
+  color: black;
+}
+.warning-terms {
+  padding-top: 50px;
+  font-size: 14px;
+  text-align: center;
+}
+
+. @media (max-width: 600px) {
+  .loginbg {
+    background: url("./mobilelogin.png");
+    background-repeat: no-repeat;
+  }
+
+  .login {
+    padding: 8% 0 0;
+
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .languages {
+    font-size: 10px;
+  }
+  .login-form {
+    /* position: relative; */
+    z-index: 1;
+    background: #ffffff;
+    border-radius: 20px;
+    max-width: auto;
+    max-height: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: none;
+    background: url("./BackgroundInbox.png");
+  }
+
+  .forgetpw {
+    font-size: 10px;
+  }
+  .login-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: top;
+    padding-bottom: 15px;
+  }
+  .login-group label {
+    width: 40%;
+    padding-right: 10px;
+  }
+  .login-group input {
+    width: 150px;
+    height: 16px;
+    font-size: 11px;
+  }
+  .selectLanguage {
+    font-size: 10px;
+  }
+  .login-email {
+    font-size: 12px;
+  }
+
+  .login-password {
+    font-size: 12px;
+  }
+  .submitbtn {
+    display: flex;
+    justify-content: center;
+    padding-right: 0;
+  }
+  .submitbtn button {
+    font-size: 10px;
+    border-radius: 10px;
+    width: 55px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .warning-terms {
+    padding-top: 50px;
+    font-size: 8px;
+  }
+  .warning-terms {
+    display: flex;
+    justify-content: center;
+  }
+}

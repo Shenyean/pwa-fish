@@ -1,0 +1,19 @@
+.fishBasket {
+  margin-left: 0%;
+  margin-right: 0%;
+  color: black;
+  display: flex;
+  flex-direction: row;
+}
+.container.apple {
+  display: flex;
+  justify-content: center;
+}
+
+.fishes {
+  color: #1a3f62;
+}
+.fishOut {
+  width: 20px;
+  height: 20px;
+}

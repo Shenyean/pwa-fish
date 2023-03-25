@@ -1,0 +1,22 @@
+.sticky {
+  z-index: 999;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: block;
+  position: fixed;
+}
+.incontent {
+  top: 60px;
+  bottom: 60px;
+  position: fixed;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.fish-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: block;
+}

@@ -1,0 +1,87 @@
+.Navbar {
+  top: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #313133;
+}
+
+.NavUser {
+  color: white;
+}
+
+.nav-user {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.Navbar > .nav-items > a {
+  color: #faf8f8;
+  font-size: 21px;
+  text-decoration: none;
+  margin: 15px;
+  position: relative;
+}
+.Navbar > .nav-items > a:hover {
+  opacity: 1;
+}
+
+.Logout > a {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 21px;
+  text-decoration: none;
+
+  position: relative;
+  text-align: right;
+}
+.outbin {
+  width: 55px;
+  height: 55px;
+  border: 0;
+}
+.inbin {
+  width: 55px;
+  height: 55px;
+  border: 0;
+}
+.inBox {
+  font-weight: 300;
+  color: #2aa8b9;
+}
+.outBox {
+  font-weight: 300;
+  color: #f29d38;
+}
+
+@media (max-width: 600px) {
+  .NavUser {
+    color: rgb(255, 255, 255);
+  }
+
+  .nav-user {
+    font-size: 18px;
+  }
+
+  .Navbar > .nav-items > a {
+    font-size: 16px;
+  }
+
+  .Logout > a {
+    font-size: 16px;
+  }
+  .outbin {
+    width: 45px;
+    height: 45px;
+    border: 0;
+    background-color: #313133;
+  }
+  .inbin {
+    width: 45px;
+    height: 45px;
+    border: 0;
+    background-color: #313133;
+  }
+}

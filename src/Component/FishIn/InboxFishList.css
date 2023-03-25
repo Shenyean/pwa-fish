@@ -1,0 +1,25 @@
+.card {
+  background-color: white;
+  outline: none;
+  border: none;
+  align-self: auto;
+  color: lch(100% 0 0 / 0.85);
+  font-size: calc(1rem * var(--base));
+  max-width: 1080px;
+  padding: calc(1rem * var(--base));
+  max-height: 100px;
+  overflow: hidden; /* Cut off the content */
+}
+
+.fixed-table {
+  table-layout: auto;
+  background-color: rgb(251, 251, 251);
+}
+
+.fixed-table th {
+  background-color: rgb(251, 251, 251);
+}
+
+.fixed-table tr:nth-child(odd) {
+  background-color: gray;
+}
