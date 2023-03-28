@@ -6,6 +6,9 @@ import Button from "react-bootstrap/Button";
 import FishNumber from "./FishNumber";
 import background from "./BackgroundInbox.png";
 import "./FishInItem.css";
+import { IntlProvider, FormattedMessage } from "react-intl";
+import messages from "../Message/messages";
+import fishpic from "./WelcomeFish.png";
 const FishInItem = (props) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -36,14 +39,19 @@ const FishInItem = (props) => {
       >
         <Modal.Header className="pop-up-modal-header">
           <Modal.Title>
-            <h5>{props.date.substring(0, 10)}</h5>
-            <h5>{props.name}</h5>
-            <h5>
+            <h6>FROM</h6>
+            <h6>{props.name}</h6>
+            <h6>DATE</h6>
+            <h6>{props.date.substring(0, 10)}</h6>
+            <h6>NO. OF FISHES</h6>
+            <h4>
               <FishNumber fishcount={props.fishcount} />
-            </h5>
+            </h4>
           </Modal.Title>
         </Modal.Header>
+
         <Modal.Body className="pop-up-modal">
+          <h6>MESSAGE</h6>
           <p>{props.message}</p>
         </Modal.Body>
         <Modal.Footer className="pop-up-modal">

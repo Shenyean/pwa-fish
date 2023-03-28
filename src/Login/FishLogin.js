@@ -9,6 +9,7 @@ import messages from "../Component/Message/messages";
 import "./RememberMe.css";
 import ForgetPassword from "./ForgetPassword";
 import { TextField } from "@mui/material";
+import welcomefish from "./WelcomeFish.png";
 
 const FishLogin = () => {
   const baseURL = "https://fish-uat.globalpsa.com/AuthServer/getOktaUser/";
@@ -135,9 +136,18 @@ const FishLogin = () => {
           }) => (
             <div className="login" dir={locale === "ar" ? "rtl" : "ltr"}>
               <div className="login-form">
-                <div className="left"></div>
+                <div className="left">
+                  <div className="login-left-inside">
+                    {" "}
+                    <div className="welcome">
+                      <span>WELCOME TO</span>{" "}
+                      <span className="bold-welcome">FISHAPP</span>
+                    </div>
+                    <img src={welcomefish} className="welcomefishPic"></img>
+                  </div>
+                </div>
                 <div className="right">
-                  <form className="form-right" onSubmit={handleSubmit}>
+                  <form className="login-right" onSubmit={handleSubmit}>
                     <div className="login-group">
                       <label className="selectLanguage">
                         {" "}
@@ -148,6 +158,7 @@ const FishLogin = () => {
                         name="language"
                         onChange={handleLocaleChange}
                       >
+                        <option value="ar" label="ARABIC"></option>
                         <option value="en" label="ENGLISH"></option>
                         <option value="id" label="BAHASA INDONESIA"></option>
                         <option value="zh" label="CHINESE"></option>
@@ -155,7 +166,6 @@ const FishLogin = () => {
                         <option value="it" label="ITALIAN"></option>
                         <option value="ko" label="KOREAN"></option>
                         <option value="tr" label="TURKISH"></option>
-                        <option value="ar" label="ARABIC"></option>
                       </select>
                     </div>
                     <div>
@@ -215,7 +225,7 @@ const FishLogin = () => {
                                   }
                                 }}
                               />
-                              <label className="selectLanguage">
+                              <label>
                                 <FormattedMessage id="rememberme" />
                               </label>
                             </div>

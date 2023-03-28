@@ -13,7 +13,7 @@
   height: 70%;
   margin: auto;
   font-size: 16px;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
 }
 
 .MuiInputLabel-root {
@@ -28,7 +28,7 @@
   border-radius: 20px;
   max-width: auto;
   max-height: auto;
-  height: 540px;
+  height: 95%;
   text-align: none;
   display: flex;
   /*background: url("./BackgroundInbox.png");*/
@@ -37,14 +37,47 @@
 .left {
   flex: 1;
   background-color: #dddedf;
+  border-radius: 15px 0 0 15px;
 }
 
+.login-left-inside {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+  align-items: center;
+}
+.welcome {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  flex-direction: column;
+}
+.bold-welcome {
+  font-size: 45px;
+  font-weight: bold;
+  margin: -20px;
+}
+.welcomefishPic {
+  margin-top: 10px;
+  width: 65%;
+  max-width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+.rememberme {
+  font-size: 16px;
+}
 .right {
   flex: 1;
   background-color: #ffffff;
   padding: 20px;
   display: flex;
   align-items: center;
+  border-radius: 0 15px 15px 0;
+  justify-content: space-around;
 }
 .login-group {
   display: flex;
@@ -101,22 +134,33 @@
   padding-top: 50px;
   font-size: 14px;
   text-align: center;
+  color: #ffffff;
 }
 
-. @media (max-width: 600px) {
+@media (max-width: 600px) {
   .loginbg {
-    background: url("./mobilelogin.png");
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* background: url(./loginbackground.png); */
+    background-size: cover;
     background-repeat: no-repeat;
+    justify-content: center;
   }
-
   .login {
     padding: 8% 0 0;
-
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    width: 90%;
+    height: 90%;
+    margin: 0;
+    /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
   }
-
-  .languages {
-    font-size: 10px;
+  .right {
+    padding: 20px;
+    background-color: #dddedf;
+  }
+  .left .languages {
+    font-size: 12px;
   }
   .login-form {
     /* position: relative; */
@@ -125,14 +169,32 @@
     border-radius: 20px;
     max-width: auto;
     max-height: auto;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
     text-align: none;
+    display: flex;
+    flex-direction: column;
     background: url("./BackgroundInbox.png");
   }
 
+  .left {
+    border-radius: 15px 15px 0 0;
+  }
+  .welcome {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+    flex-direction: column;
+  }
+  .bold-welcome {
+    font-size: 45px;
+    font-weight: bold;
+    margin: -20px;
+  }
+  .right {
+    border-radius: 0 0 15px 15px;
+  }
   .forgetpw {
     font-size: 10px;
   }
@@ -141,30 +203,31 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: top;
-    padding-bottom: 15px;
   }
   .login-group label {
     width: 40%;
     padding-right: 10px;
   }
   .login-group input {
-    width: 150px;
+    width: 250px;
     height: 16px;
     font-size: 11px;
   }
   .selectLanguage {
-    font-size: 10px;
+    font-size: 12px;
   }
   .login-email {
     font-size: 12px;
   }
-
+  .rememberme label {
+    font-size: 12px;
+  }
   .login-password {
     font-size: 12px;
   }
   .submitbtn {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     padding-right: 0;
   }
   .submitbtn button {
@@ -172,12 +235,17 @@
     border-radius: 10px;
     width: 55px;
   }
+  .terms {
+    font-size: 12px;
+  }
   p {
     font-size: 12px;
   }
   .warning-terms {
-    padding-top: 50px;
+    padding-right: 10px;
     font-size: 8px;
+    position: absolute;
+    bottom: 0;
   }
   .warning-terms {
     display: flex;

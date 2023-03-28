@@ -2,7 +2,10 @@
   background-image: url(./BackgroundInbox.png);
 }
 .pop-up-modal-header {
-  background-image: url(./popupbackground.png);
+  background-image: url(./popup2.PNG);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 }
 
 @media (max-width: 600px) {
@@ -11,6 +14,7 @@
     font-weight: bold;
   }
   .pop-up-modal-header {
-    background-image: url(./mobilepopupbackground.png);
+    background-image: url(./popup2.PNG);
+    background-size: contain;
   }
 }

@@ -9,7 +9,7 @@ input[type="checkbox"] {
 .rememberme label {
   width: 220px;
   padding-right: 5px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .rememberme input {
   width: 20px;
@@ -19,7 +19,7 @@ input[type="checkbox"] {
   .rememberme label {
     width: 120px;
     padding-right: 5px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .rememberme input {
     width: 10px;

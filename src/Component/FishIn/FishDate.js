@@ -19,7 +19,7 @@ const FishDate = (props) => {
 
   return (
     <div className="expense-date">
-      {screenwidth < 600 ? (
+      {screenwidth > 600 ? (
         <div className="expense-date__month">{month}</div>
       ) : (
         <div className="expense-date__month">{monthSmall}</div>

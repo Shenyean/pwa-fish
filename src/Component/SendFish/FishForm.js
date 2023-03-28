@@ -20,6 +20,7 @@ import {
 
 import apple from "./sendbtn.png";
 import "./FishForm.css";
+import ballon from "./FishBallon.png";
 // import background from "./background8.png";
 
 const FishForm = () => {
@@ -40,7 +41,19 @@ const FishForm = () => {
         onChange={(e) => {
           setFieldValue(name, e.target.value);
         }}
-        style={{ borderRadius: "15px", height: "40px" }}
+        style={{
+          borderRadius: "0",
+          height: "1.5em",
+          border: "solid",
+          borderWidth: "5px",
+          borderColor: "#000000",
+          borderStyle: "solid",
+          borderBottomWidth: "2px",
+          borderLeftWidth: "2px",
+          borderRightWidth: "2px",
+          borderTopWidth: "2px",
+          width: "250px",
+        }}
       >
         {children}
       </Select>
@@ -56,7 +69,7 @@ const FishForm = () => {
   }));
   const initialValues = {
     recipients: [],
-    message: "Your Message",
+    message: "",
     fishes: 4,
     cc: [],
   };
@@ -125,107 +138,142 @@ const FishForm = () => {
             {/* <Stack spacing={2}> */}
 
             <div className="form-left">
-              <span> SEND FISH TODAY </span>
-              <Autocomplete
-                filterOptions={filterOptions}
-                disablePortal
-                className="recipients-field"
-                name="recipients"
-                id="recipients"
-                options={nameList}
-                getOptionLabel={(option) => option.name + " , " + option.userid}
-                onChange={(e, value) =>
-                  setFieldValue(
-                    "recipients",
-                    value !== null ? value : initialValues.recipients
-                  )
-                }
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    variant="standard"
-                    className="reciepient-text"
-                    label="TO:"
-                    sx={{
-                      "& .MuiAutocomplete-inputRoot": {
-                        paddingLeft: "20px !important",
-                        borderRadius: "15px",
-                        height: "40px",
-                      },
-                    }}
-                    // InputProps={{
-                    //   style: {
-                    //     alignSelf: "center",
-                    //     borderRadius: "25px",
-                    //     height: "35px",
-                    //   },
-                    // }}
-                  />
-                )}
-              ></Autocomplete>
-              <Autocomplete
-                filterOptions={filterOptions}
-                disablePortal
-                name="cc"
-                id="cc"
-                options={nameList}
-                getOptionLabel={(option) => option.name + " , " + option.userid}
-                onChange={(e, value) =>
-                  setFieldValue("cc", value !== null ? value : initialValues.cc)
-                }
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    variant="standard"
-                    label="CC:"
-                    sx={{
-                      "& .MuiAutocomplete-inputRoot": {
-                        paddingLeft: "20px !important",
-                        borderRadius: "15px",
-                        height: "40px",
-                      },
-                    }}
-                    name="cc"
-                  />
-                )}
-              ></Autocomplete>
-              <div className="form-fishNumber">
-                <span>NUMBER OF FISHES:</span>
-                <FormControl>
-                  <Field name="fishes" component={CustomizedSelectForFormik}>
-                    <MenuItem value={1}>One</MenuItem>
-                    <MenuItem value={2}>Two</MenuItem>
-                    <MenuItem value={3}>Three</MenuItem>
-                    <MenuItem value={4}>Four</MenuItem>
-                  </Field>
-                </FormControl>
+              <div className="fish-left-inside">
+                <div className="fish-today">
+                  {" "}
+                  <span className="send-word">SEND</span>{" "}
+                  <span className="bold-fish">FISH </span>
+                  <span className="today-word">TODAY</span>{" "}
+                </div>
+
+                <Autocomplete
+                  filterOptions={filterOptions}
+                  disablePortal
+                  className="recipients-field"
+                  name="recipients"
+                  id="recipients"
+                  options={nameList}
+                  getOptionLabel={(option) =>
+                    option.name + " , " + option.userid
+                  }
+                  onChange={(e, value) =>
+                    setFieldValue(
+                      "recipients",
+                      value !== null ? value : initialValues.recipients
+                    )
+                  }
+                  renderInput={(params) => (
+                    <TextField
+                      {...params}
+                      variant="standard"
+                      className="reciepient-text"
+                      label="TO:"
+                      sx={{
+                        "& .MuiAutocomplete-inputRoot": {
+                          paddingLeft: "20px !important",
+                          borderRadius: "15px",
+                          height: "40px",
+                        },
+                      }}
+                      // InputProps={{
+                      //   style: {
+                      //     alignSelf: "center",
+                      //     borderRadius: "25px",
+                      //     height: "35px",
+                      //   },
+                      // }}
+                    />
+                  )}
+                ></Autocomplete>
+                <Autocomplete
+                  filterOptions={filterOptions}
+                  disablePortal
+                  name="cc"
+                  id="cc"
+                  options={nameList}
+                  getOptionLabel={(option) =>
+                    option.name + " , " + option.userid
+                  }
+                  onChange={(e, value) =>
+                    setFieldValue(
+                      "cc",
+                      value !== null ? value : initialValues.cc
+                    )
+                  }
+                  renderInput={(params) => (
+                    <TextField
+                      {...params}
+                      variant="standard"
+                      label="CC:"
+                      sx={{
+                        "& .MuiAutocomplete-inputRoot": {
+                          paddingLeft: "20px !important",
+                          borderRadius: "15px",
+                          height: "40px",
+                        },
+                      }}
+                      name="cc"
+                    />
+                  )}
+                ></Autocomplete>
+                <div className="form-fishNumber">
+                  <span>NUMBER OF FISHES:</span>
+                  <FormControl>
+                    <Field name="fishes" component={CustomizedSelectForFormik}>
+                      <MenuItem value={1}>One</MenuItem>
+                      <MenuItem value={2}>Two</MenuItem>
+                      <MenuItem value={3}>Three</MenuItem>
+                      <MenuItem value={4}>Four</MenuItem>
+                    </Field>
+                  </FormControl>
+                </div>
               </div>
             </div>
             <div className="form-right">
-              <TextField
-                id="message-multiline"
-                name="message"
-                multiline="true"
-                minRows={4}
-                onChange={handleChange}
-                value={values.message}
-                InputProps={{
-                  style: {
-                    borderRadius: "25px",
-                  },
-                }}
-              ></TextField>
-              <Box
-                m={1}
-                display="flex"
-                justifyContent="flex-end"
-                alignItems="flex-end"
-              >
-                <Button className="send-btn" type="submit">
-                  <img src={apple} />
-                </Button>
-              </Box>
-
+              <div className="fish-right-inside">
+                <div className="message-title">
+                  <span>Your Message</span>
+                </div>
+                <div className="textfield-with-lines">
+                  <TextField
+                    id="message-multiline"
+                    name="message"
+                    multiline="true"
+                    minRows={8}
+                    onChange={handleChange}
+                    value={values.message}
+                    variant="standard"
+                    InputProps={{
+                      style: {
+                        borderRadius: "25px",
+                        zIndex: 1,
+                        width: "400px",
+                      },
+                      disableUnderline: true,
+                      className: "MuiInputBase-input",
+                      startAdornment: (
+                        <div className="lines">
+                          <div className="lines-inner"></div>
+                        </div>
+                      ),
+                    }}
+                  ></TextField>
+                </div>
+                <div className="fish-send-btn">
+                  {" "}
+                  <Box
+                    m={1}
+                    display="flex"
+                    justifyContent="flex-end"
+                    alignItems="flex-end"
+                  >
+                    <Button className="send-btn" type="submit">
+                      <img src={apple} />
+                    </Button>
+                  </Box>
+                </div>
+              </div>
+              <div>BROUGHT TO YOU BY GROUP HR AND GROUP IT</div>
               {/* </Stack> */}
             </div>
           </Form>

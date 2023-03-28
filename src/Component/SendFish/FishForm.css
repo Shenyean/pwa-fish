@@ -1,7 +1,7 @@
 img {
   width: 120px;
   height: 52px;
-  border: 2px ridge rgb(212, 208, 208);
+
   background-color: none;
   border-radius: 15px;
   opacity: 0.9;
@@ -24,21 +24,118 @@ img {
 }
 .form-fishNumber {
   display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.form-fishNumber > span {
+  margin-right: 20px;
 }
 .MuiAutocomplete-root {
   width: 400px;
 }
 .form-left {
+  display: flex;
+  flex: 1 1;
+  background-color: #dddedf;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 0 0 15px;
+}
+.fish-left-inside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fish-today {
+  font-size: 32px;
+  padding-bottom: 70px;
+}
+.bold-fish {
+  font-weight: bold;
+}
+.form-right {
+  display: flex;
   flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #ffffff;
+  background-image: url(./FishBallon.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-x: right;
+  border-radius: 0 15px 15px 0;
+}
+.fish-right-inside {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #dddedf;
+  justify-content: flex-end;
+  width: 400px;
+  padding-bottom: 50px;
+  max-width: 600px;
 }
-.form-right {
-  flex: 1;
-  background-color: #ffffff;
+
+.message-title {
+  width: 100%;
 }
+.textfield-with-lines {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  border-radius: 25px;
+  width: 400px;
+}
+
+.textfield-with-lines .MuiInputBase-input {
+  position: relative;
+  z-index: 1;
+}
+
+.textfield-with-lines .lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.textfield-with-lines .lines:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 23px,
+    #000000 23px,
+    #000000 24px
+  );
+}
+
+.textfield-with-lines .lines .lines-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.fish-send-btn {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
 /* .recipients-field {
   border-radius: 25px;
   background-color: rgb(212, 208, 208);
@@ -51,29 +148,130 @@ img {
 } */
 
 @media (max-width: 600px) {
-  img {
+  .fishform img {
     width: 100px;
     height: 42px;
-    border: 1px ridge black;
-    background-color: rgb(241, 241, 241);
+
+    background-color: #dddedf;
   }
   .fishFormContent {
     width: 100%;
     display: flex;
-    align-items: center;
-    margin-bottom: 170px;
 
+    margin-bottom: 170px;
+    align-items: flex-start;
     background-repeat: no-repeat;
   }
 
+  .bold-fish {
+    margin-top: -10px;
+    margin-bottom: -5px;
+    font-weight: bolder;
+  }
   .form-big {
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+    background-color: #dddedf;
   }
 
   .form-left {
-    flex: none;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    background-image: url(./mobileballon.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+  .fish-left-inside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 94%;
+    max-width: 500px;
   }
   .form-right {
-    flex: none;
+    width: 100%;
+    background-color: #dddedf;
+    border-radius: 0 0 15px 15px;
+    background-image: none;
+  }
+  .fish-today {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10%;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .today-word {
+    margin-top: -12px;
+    font-size: 22px;
+  }
+  .send-word {
+    font-size: 28px;
+    margin-bottom: -10px;
+  }
+  .fish-right-inside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 94%;
+    max-width: 500px;
+    padding-top: 15px;
+  }
+  .textfield-with-lines {
+    width: 100%;
+  }
+  .textfield-with-lines {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    border-radius: 25px;
+    width: 100%;
+  }
+
+  .textfield-with-lines .MuiInputBase-input {
+    position: relative;
+    z-index: 1;
+  }
+
+  .textfield-with-lines .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 340px;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .textfield-with-lines .lines:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 23px,
+      #000000 23px,
+      #000000 24px
+    );
+  }
+
+  .textfield-with-lines .lines .lines-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
   }
 }

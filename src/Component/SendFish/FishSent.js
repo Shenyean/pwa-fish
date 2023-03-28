@@ -12,7 +12,9 @@ const FishSent = () => {
       //   backgroundSize: "cover",
       // }}
     >
-      <p>Fish Message Sent successfully to {toEmail} </p>
+      <div className="fish-box">
+        <p>Fish Message Sent successfully to {toEmail} </p>
+      </div>
     </div>
   );
 };

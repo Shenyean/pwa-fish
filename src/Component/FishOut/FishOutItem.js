@@ -37,8 +37,11 @@ const FishOutItem = (props) => {
       >
         <Modal.Header className="pop-up-modal-header">
           <Modal.Title>
-            <h5>{props.date.substring(0, 10)}</h5>
-            <h5>{props.name}</h5>
+            <h6>FROM</h6>
+            <h6>{props.name}</h6>
+            <h6>DATE</h6>
+            <h6>{props.date.substring(0, 10)}</h6>
+            <h6>NO. OF FISHES</h6>
             <h5>
               <FishOutNumber fishcount={props.fishcount} />
             </h5>

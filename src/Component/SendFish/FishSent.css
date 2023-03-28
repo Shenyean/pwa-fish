@@ -4,11 +4,21 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  background: url("./background8.png");
+
+  /* background: url("./background8.png"); */
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.fish-box {
+  height: 70%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: #dddedf;
+}
 .fishSent p {
   font-size: 28px;
 }
@@ -22,13 +32,22 @@
     display: flex;
     align-items: center;
     margin-bottom: 170px;
-    background: url("./mobile_background8.png");
+
+    /* background: url("./mobile_background8.png"); */
     background-repeat: no-repeat;
   }
-  img {
+  .fish-box {
+    height: 94%;
+    width: 94%;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #dddedf;
+  }
+  .fishSent img {
     width: 100px;
     height: 42px;
-    border: 1px ridge black;
+
     background-color: rgb(241, 241, 241);
   }
 }
